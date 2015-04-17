@@ -2,7 +2,7 @@
 
 ## What Is It
 
-Currently, this plugin provides a single rule to help enforce spacing inside of JSX expression containers.
+Currently, this plugin provides two rules that help enforce spacing inside of JSX expression containers.
 
 ## Usage
 
@@ -13,6 +13,8 @@ To enable this plugin, your JSCS configuration would need to include:
   "plugins": [ "jscs-jsx-rules" ]
 }
 ```
+
+Note that you will also want to install `esprima-fb` and supply jscs with it for the [esprima option](http://jscs.info/overview.html#-esprima-).
 
 ## Rules
 
