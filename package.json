@@ -1,0 +1,45 @@
+{
+  "name": "jscs-jsx-rules",
+  "version": "0.0.1",
+  "description": "jscs rules for jsx content",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "test": "mocha spec/{**/*,*}.spec.js -r spec/setup -R spec",
+    "coverage": "istanbul cover -x \"spec/**\" _mocha -- spec/{**/*,*}.spec.js -r spec/setup",
+    "show-coverage": "open coverage/lcov-report/index.html",
+    "test-ci": "mocha -w spec/spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:LeanKit-Labs/jscs-jsx-rules.git"
+  },
+  "keywords": [
+    "jscs",
+    "jsx"
+  ],
+  "author": "Ryan Niemeyer <ryan@knockmeout.net>",
+  "contributors": [
+    {
+      "name": "Ryan Niemeyer",
+      "email": "ryan@knockmeout.net",
+      "url": "http://knockmeout.net"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeanKit-Labs/jscs-jsx-rules/issues"
+  },
+  "homepage": "https://github.com/LeanKit-Labs/jscs-jsx-rules",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "esprima-fb": "^14001.1.0-dev-harmony-fb",
+    "istanbul": "^0.3.5",
+    "jscs": "^1.12.0",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.7.0"
+  }
+}
