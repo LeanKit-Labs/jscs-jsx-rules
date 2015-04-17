@@ -7,6 +7,7 @@ describe( "index", function() {
 			registerRule: stub
 		} );
 
-		stub.firstCall.args[ 0].name.should.equal( "RequireSpacesInsideJsxExpressionContainerRule" );
+		stub.firstCall.args[ 0 ].name.should.equal( "DisallowSpacesInsideJsxExpressionContainersRule" );
+		stub.lastCall.args[ 0 ].name.should.equal( "RequireSpacesInsideJsxExpressionContainersRule" );
 	} );
 } );

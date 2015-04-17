@@ -5,10 +5,8 @@ module.exports = function( jscs ) {
 	// try to load each rule from the rules directory
 	var base = path.join( __dirname, "rules" );
 	var rules = fs.readdirSync( base ).forEach( function( file ) {
-		try {
+		if ( !fs.statSync( path.join( base, file ) ).isDirectory() ) {
 			jscs.registerRule( require( path.join( base, file ) ) );
-		} catch( ex ) {
-			console.warn( ex );
 		}
 	} );
 };

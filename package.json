@@ -10,7 +10,7 @@
     "test": "mocha spec/{**/*,*}.spec.js -r spec/setup -R spec",
     "coverage": "istanbul cover -x \"spec/**\" _mocha -- spec/{**/*,*}.spec.js -r spec/setup",
     "show-coverage": "open coverage/lcov-report/index.html",
-    "test-ci": "mocha -w spec/spec.js"
+    "test-ci": "npm test -- -w"
   },
   "repository": {
     "type": "git",

@@ -10,17 +10,45 @@ To enable this plugin, your JSCS configuration would need to include:
 
 ```json
 {
-  "plugins": [ "jscs-jsx-rules" ],
-
-  "requireSpacesInsideJsxExpressionContainers": true
+  "plugins": [ "jscs-jsx-rules" ]
 }
 ```
 
 ## Rules
 
+### disallowSpacesInsideJsxExpressionContainers
+
+Disallows spaces after the opening curly brace and before the closing curly brace of a JSX expression container.
+
+Type: `Boolean`
+
+Value: `true`
+
+**Example**
+
+```json
+"disallowSpacesInsideJsxExpressionContainers": true
+```
+
+**Valid**
+
+```js
+function render() {
+	return <div>{this.props.name}</div>;
+}
+```
+
+**Invalid**
+
+```js
+function render() {
+	return <div>{ this.props.name }</div>;
+}
+```
+
 ### requireSpacesInsideJsxExpressionContainers
 
-Requires that are spaces after the opening curly brace and before the closing curly brace of a JSX expression container.
+Requires that there are spaces after the opening curly brace and before the closing curly brace of a JSX expression container.
 
 Type: `Boolean`
 
