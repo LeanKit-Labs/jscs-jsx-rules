@@ -17,10 +17,6 @@ describe( "disallowSpacesInsideJsxExpressionContainers", function() {
 		} );
 	} );
 
-	describe( "configure", function() {
-
-	} );
-
 	describe( "getOptionName", function() {
 		it( "should return the correct name", function() {
 			rule.getOptionName().should.equal( "disallowSpacesInsideJsxExpressionContainers" );
@@ -75,7 +71,7 @@ describe( "disallowSpacesInsideJsxExpressionContainers", function() {
 			} );
 
 			it( "should not report an error when there are proper spaces", function() {
-				checker.checkString( goodValue).getErrorCount().should.equal( 0 );
+				checker.checkString( goodValue ).getErrorCount().should.equal( 0 );
 			} );
 		} );
 	} );
